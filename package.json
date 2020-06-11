@@ -1,5 +1,16 @@
 {
+ 
+  "name": "API_REST",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/lopes-bot/API_REST.git",
+  "author": "lopes-bot <andrelopessfla@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start":"nodemon serve.js"
+  },
   "dependencies": {
     "express": "^4.17.1"
   }
+
 }
