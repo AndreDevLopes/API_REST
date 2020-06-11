@@ -11,10 +11,16 @@ mongoose.connect('mongodb://localhost:27017/nodeapi',{useNewUrlParser: true});
 
 requireDir('./src/models');
 
+const Product = mongoose.model('Product');
 
 app.get("/",(req,res)=>{
-  res.send("hello word");
-})
+  Product.create({
+    title:"React Native",
+    description:"Buld Native apps with React",
+    url:"http://github.com/facebook/react-native",
+  })
+  return res.send("hello word");
+});
 
 const Port = 3001;
 app.listen(Port,()=>{
