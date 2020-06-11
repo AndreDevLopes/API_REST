@@ -14,5 +14,12 @@ module.exports ={
   async show(req,res){
     const product = await Product.findById(req.params.id);
     return res.json(product);
+  },
+  async update(req,res){
+    const product = await Product.findByIdAndUpdate(req.params.id, req.body,{new:true});
+    return res.json(product);
+  },
+  async destroy(req,res){
+
   }
 }
